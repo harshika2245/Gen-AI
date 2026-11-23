@@ -1,0 +1,67 @@
+[
+  {
+    "request_id": "032fb93c-52c0-4371-b2e2-a840534bb59f",
+    "timestamp": "2026-11-23T03:13:05.234417+00:00",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "prompt": "Give one reason to log every LLM call.",
+    "system": "Answer in one sentence.",
+    "text": "Logging every LLM call is essential for debugging and troubleshooting unexpected model outputs or errors.",
+    "input_tokens": 17,
+    "output_tokens": 17,
+    "thinking_tokens": 0,
+    "latency_ms": 632.7,
+    "cost_usd": 4.76e-05,
+    "attempts": 1,
+    "ok": true,
+    "error": null,
+    "tags": {
+      "experiment": "exp03"
+    },
+    "total_tokens": 34
+  },
+  {
+    "request_id": "9b398d93-140d-4e08-a8bd-b4d5b8ee4c0d",
+    "timestamp": "2026-11-23T03:13:09.816961+00:00",
+    "provider": "flaky-fake",
+    "model": "fake-model",
+    "prompt": "retry test",
+    "system": null,
+    "text": "Echo: retry test",
+    "input_tokens": 2,
+    "output_tokens": 3,
+    "thinking_tokens": 0,
+    "latency_ms": 1953.0,
+    "cost_usd": 0.0,
+    "attempts": 3,
+    "ok": true,
+    "error": null,
+    "tags": {
+      "experiment": "exp03",
+      "case": "retry_503"
+    },
+    "total_tokens": 5
+  },
+  {
+    "request_id": "6322dca5-7e28-437a-9461-c733a106363c",
+    "timestamp": "2026-11-23T03:13:13.144328+00:00",
+    "provider": "flaky-fake",
+    "model": "fake-model",
+    "prompt": "bad request test",
+    "system": null,
+    "text": "",
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens": 0,
+    "latency_ms": 0.0,
+    "cost_usd": 0.0,
+    "attempts": 1,
+    "ok": false,
+    "error": "simulated HTTP 400",
+    "tags": {
+      "experiment": "exp03",
+      "case": "error_400"
+    },
+    "total_tokens": 0
+  }
+]
